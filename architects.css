@@ -10,7 +10,7 @@ body{
   font-weight: bold;
 }
 .navbar{
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
 }
 .nav-links{
@@ -98,9 +98,8 @@ main{
 
 }
 .team-contents{
-
   max-width:530px ;
- 
+  margin-bottom: 50px;
 }
 #quick-list{
   font-weight: 500;
@@ -119,6 +118,7 @@ main{
 .section-title{
   font-size: 2.8rem;
   font-weight: 700;
+ 
 }
 
 /*Some facts related styles*/
@@ -134,10 +134,13 @@ main{
 .facts-container{
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  
   
 }
+
 .fact-number{
-  font-size: 2.8rem;
+font-size: 2.8rem;
   font-weight: 600;
    margin-top: 5px;
   margin-bottom: 10px;
@@ -147,6 +150,85 @@ main{
   font-weight: 600;
   margin-top: 10px;
 }
+/*
+middle section style
+*/
+#features-title{
+  border-left: 5px solid #FF900E ;
+  padding-left: 20px;
+}
+.feature-title{
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.middle-section-facts{
+  padding: 10px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.middle-section{
+  max-width: 1440px;
+  margin: 130px auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 130px;
+}
+#experiece-badge{
+  padding: 45px 42px;
+   font-size: 1.5rem;
+   font-weight: 500;
+   margin-left: -100px;
+   margin-top: -100px;
+}
+#experience-year{
+font-size: 4rem;
+font-weight: 700;
+}
+.middle-section-2 img{
+  width: 100%;
+}
+/*footer section style*/
+.footer-section{
+  max-width: 1440px;
+  background-color: #FFF4E7;
+  text-align: center;
+  padding: 38px;
+  margin: 210px  auto;
+  border-radius: 8px;
+}
+
+/*
+our sponsor related styles 
+
+
+
+we can do the value style in another way like giving it a specific width then i dont havbe to use another div inside of div. 
+or this one if i want to use another div inside of one that i already have.
+.our-sponsors{
+max-width: 1440px;
+margin: 0 auto;
+}
+.our-sponsor-contents{
+ text-align: center;
+}
+
+*/
+
+
+.sponsor-info{
+max-width:540px;
+margin:50px auto;
+text-align:center;
+}
+.sponsor-companies{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+ .sponsor-companies img{
+    filter: grayscale(100%);
+  }
+
 
 /*media query */
 @media screen  and (max-width:576px){
@@ -164,12 +246,30 @@ main{
   }
   .team-contents{
     justify-content: center;
-    max-width: 300px;
-   
+    max-width: 500px;
   }
-  .team-image-container{
+  .team-image-container , .facts-container ,.sponsor-companies{
     grid-template-columns: repeat(1,1fr);
   }
+  .facts-container{
+    justify-items: center;
+    gap: 24px;
+  }
+  .sponsor-companies{
+    justify-items: center;
+    gap: 50px;
+  }
+  .middle-section{
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+  }
+ 
+ #experiece-badge{
+  margin-top: 20px;
+  margin-left: 20px;
+ }
+  
+
   
 }/*for the medium device*/
 
@@ -177,9 +277,27 @@ main{
   .teams{
     flex-direction: column;
   }
-  .team-contents{
-   margin: 50px auto;
+ 
+    .team-image-container , .facts-container{
+    grid-template-columns: repeat(2,1fr);
   }
+
+  .facts-container,.sponsor-companies{
+    justify-items: center;
+  }
+  .sponsor-companies{
+    grid-template-columns: repeat(3,1fr);
+   row-gap: 50px;
+  }
+  .middle-section{
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+  }
+  #experiece-badge{
+  margin-top: 20px;
+  margin-left: 20px;
+ }
+ 
   
 }
 
